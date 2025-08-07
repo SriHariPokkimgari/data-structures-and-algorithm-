@@ -81,3 +81,21 @@ myStack.min();
 
 //Max method returns the maximum value.
 myStack.max();
+
+//Reverse the string using stack.
+const demo = (str) => {
+  let stack = [];
+
+  for (let char of str) {
+    stack.push(char);
+  }
+
+  let reversedStr = "";
+
+  while (stack.length > 0) {
+    reversedStr += stack.pop();
+  }
+  return reversedStr;
+};
+
+console.log(demo("hello world"));
